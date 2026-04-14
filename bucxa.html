@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Solar Gauge</title>
+<style>
+  body {
+    text-align: center;
+    font-family: Arial;
+  }
+  .value {
+    font-size: 60px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<h3>Bức xạ mặt trời</h3>
+<div id="value" class="value">0</div>
+
+<script>
+// giả lập giá trị (sau sẽ nối eRA)
+let value = 500;
+
+// đổi màu theo mức
+let color = "green";
+if (value > 700) color = "red";
+else if (value > 300) color = "orange";
+
+let el = document.getElementById("value");
+el.innerHTML = value + " W/m²";
+el.style.color = color;
+</script>
+
+</body>
+</html>
