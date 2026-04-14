@@ -6,8 +6,8 @@
   <script src="https://cdn.jsdelivr.net/npm/gaugeJS/dist/gauge.min.js"></script>
 </head>
 <body>
-  <h3 style="text-align:center">Nhiệt độ realtime</h3>
-  <canvas id="gauge" width="200" height="250"></canvas>
+  <h3 style="text-align:center">Nhiệt độ</h3>
+  <canvas id="gauge" width="300" height="200"></canvas>
   <div id="value" style="text-align:center;font-size:20px;"></div>
 
   <script>
@@ -15,7 +15,7 @@
 
     const min = parseFloat(urlParams.get("min")) || 0;
     const max = parseFloat(urlParams.get("max")) || 100;
-    const warning = parseFloat(urlParams.get("warning")) || 35;
+    const warning = parseFloat(urlParams.get("warning")) || 30;
     const danger = parseFloat(urlParams.get("danger")) || 45;
 
     const opts = {
@@ -57,7 +57,7 @@
       }
     }
 
-    // update mỗi 1 giây
+    // update mỗi 2 giây
     setInterval(fetchTemperature, 3000);
     fetchTemperature();
   </script>
