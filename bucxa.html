@@ -35,7 +35,7 @@ chart.setOption(option);
 // 🔥 Lấy dữ liệu từ cảm biến (API)
 async function fetchTemp() {
   try {
-    const res = await fetch("https://your-api/temperature");
+   const res = await fetch("http://your-server:3000/temperature");
     const data = await res.json();
 
     chart.setOption({
